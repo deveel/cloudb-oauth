@@ -1,0 +1,60 @@
+CloudB OAuth
+Author: Antonello Provenzano <antonello@deveel.com>
+----------------------------------------------------
+
+Description
+===========
+
+
+License
+=======
+
+CloudB OAuth is released under the LGPL version 3 open source license.
+See COPYING for details of the license. If the license is not
+present go to http://www.gnu.org/licenses/lgpl-3.0.txt to receive 
+a copy of the license.
+
+
+Requirements
+============
+
+
+Building CloudB OAuth
+=====================
+
+
+Building with Script
+--------------------
+It is possible to compile the sources using the 'build' script 
+provided. In Windows systems, this accepts the optional argument
+'mono', that targets the compilation to the Mono framework.
+
+Building with NAnt
+------------------
+Alternatively to the use of the script provided, it is also possible
+to compile CloudB by invoking directly NAnt and passing the main
+script 'ouath.build' as argument.
+
+Given '/home/deveel/cloudb' the base location where the package
+was extracted, invoke the following:
+
+Unix
+mono /home/deveel/cloudb/libs/nant/NAnt.exe -buildfile:../../src/oauth.build
+
+Windows
+C:\deveel\cloudb\libs\nant\NAnt.exe -buildfile:..\..\src\oauth.build
+
+
+'clean'   - Cleans up all the outputs of the compilation by any of
+            the other targets
+
+It is also possible to customize the compilation by specifying one
+or more of the following variables.
+
+'platform'  - Defines the target machine architecture of the compiled
+              components ('anycpu', 'x86', 'x64')
+'output'    - The path where the compiled components will be placed
+'system'    - Indicates the operating system family targetted by the
+              compilation ('windows', 'unix')
+'libs'      - Points to the path where the external libraries required
+              by the compilation are located
